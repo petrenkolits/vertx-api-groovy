@@ -1,0 +1,50 @@
+plugins {
+  id 'groovy'
+  id 'io.vertx.vertx-plugin' version '0.0.8'
+}
+
+ext {
+  vertxVersion = '3.5.1'
+}
+
+repositories {
+  jcenter()
+}
+
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+dependencies {
+  compile "io.vertx:vertx-web-client"
+  compile "io.vertx:vertx-auth-jwt"
+  compile "io.vertx:vertx-unit"
+  compile "io.vertx:vertx-core"
+  compile "io.vertx:vertx-web"
+  compile "io.vertx:vertx-stomp"
+  compile "io.vertx:vertx-mongo-client"
+  compile "io.vertx:vertx-lang-groovy"
+}
+
+vertx {
+  mainVerticle = 'groovy:MainVerticle'
+  vertxVersion = '3.5.1'
+}
+
+//processResources {
+//  from 'src/main/groovy'
+//}
+//
+//shadowJar {
+//  classifier = 'fat'
+//  manifest {
+//    attributes 'Main-Verticle': 'MyGroovyVerticle.groovy'
+//  }
+//  mergeServiceFiles {
+//    include 'META-INF/services/io.vertx.core.spi.VerticleFactory'
+//  }
+//  mergeGroovyExtensionModules()
+//}
+//
+//task wrapper(type: Wrapper) {
+//  gradleVersion = '4.0'
+//}
