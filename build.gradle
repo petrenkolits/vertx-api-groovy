@@ -15,14 +15,16 @@ version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 dependencies {
-  compile "io.vertx:vertx-web-client"
-  compile "io.vertx:vertx-auth-jwt"
-  compile "io.vertx:vertx-unit"
-  compile "io.vertx:vertx-core"
-  compile "io.vertx:vertx-web"
-  compile "io.vertx:vertx-stomp"
-  compile "io.vertx:vertx-mongo-client"
-  compile "io.vertx:vertx-lang-groovy"
+  compile 'io.vertx:vertx-web-client'
+  compile 'io.vertx:vertx-auth-jwt'
+  compile 'io.vertx:vertx-unit'
+  compile 'io.vertx:vertx-core'
+  compile 'io.vertx:vertx-web'
+  compile 'io.vertx:vertx-stomp'
+  compile 'io.vertx:vertx-mongo-client'
+  compile 'io.vertx:vertx-lang-groovy'
+  compile 'com.hubrick.vertx:vertx-elasticsearch-service:2.2.0'
+  runtime 'org.slf4j:slf4j-simple:1.8.0-beta1'
 }
 
 vertx {
